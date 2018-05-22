@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Lab6-Zifeng Chen</title>
+<link rel="stylesheet" type= "text/css" href= "css/style.css" />
+
+
+
+
+</head>
+
+<body>
+
+	<main>
+
+	<h1 class="fade-scroll">Welcome to the iPhone Library</h1>
+			
+	<div id="top" class="fade-scroll">
+	<img id="1" src="images/iphone.jpg" alt="iPhone1" width="250px">
+	<p class="fade-scroll"><img id="X" alt="iPhoneX" src="images/iphonex.jpg" width="430px">On September 12, Apple introducted the iPhone 8, iPhone 8 Plus and the brand new iPhone X. Ten years ago, the first generation of iPhone(left image) was introduced in the United States on June 29, 2007, and it featured quad-band GSM cellular connectivity with GPRS and EDGE support for data transfer. Ten years later, we now have a iPhone X(right image). I think it's a cool way to build a iPhone library of each generation of iPhone.Who knows what will happen to iPhone and the whole smartphone industry in another ten years?</p>
+<!--image source for iPhone X:http://i2.mirror.co.uk/incoming/article11159435.ece/ALTERNATES/s615b/Apple-launch-iPhone-X-Cupertino-USA-12-Sep-2017.jpg
+image source for iPhone first generation: https://upload.wikimedia.org/wikipedia/commons/1/1f/Original_iPhone_rear.jpg
+	image source for iPhone 3GS to iPhone 7: https://i.ytimg.com/vi/hzfySDkmH0A/maxresdefault.jpg
+	image source for iPhone 8: http://cdn.wccftech.com/wp-content/uploads/2017/09/Phone-X-vs-iPhone-8-Plus-vs-iPhone-8-All-Detailed-Specs-Comparison.jpg
+	-->
+		</div>
+		
+	<div class="nav-section">
+	<nav>
+		<ul>
+			<li><a class="scrollTo" data-scrollTo="I3" href="#">iPhone 3GS</a></li>
+			<li><a class="scrollTo" data-scrollTo="I4" href="#">iPhone 4(s)</a></li>
+			<li><a class="scrollTo" data-scrollTo="I5" href="#">iPhone 5(c/s)</a></li>
+			<li><a class="scrollTo" data-scrollTo="I6" href="#">iPhone 6(s)</a></li>
+			<li><a class="scrollTo" data-scrollTo="I7" href="#">iPhone 7</a></li>
+			<li><a class="scrollTo" data-scrollTo="I8" href="#">iPhone 8</a></li>
+			<li><a class="scrollTo" data-scrollTo="I9" href="#">iPhone Future</a></li>
+		</ul>		 
+	</nav>
+		</div>
+	
+	<div class="library">
+		<section class="bg1" id="I3">
+			
+		<img src="images/I3.jpg" alt="iPhone 3GS" height="480px">
+		</section>
+		<section class="bg2" id="I4">
+			<img src="images/I4.jpg" alt="iPhone4" height="480px">
+		</section>
+		<section class="bg3" id="I5">
+			<img src="images/I5.jpg" alt="iPhone5" height="480px">
+		</section>
+		<section class="bg4" id="I6">
+			<img src="images/I6.jpg" alt="iPhone6" height="480px">
+		</section>
+		<section class="bg5" id="I7">
+			<img src="images/I7.jpg" alt="iPhone7" height="480px">
+		</section>
+		<section class="bg6" id="I8">
+			<img src="images/I8.jpg" alt="iPhone8" height="480px">
+		</section>
+			<section class="bg7" id="I9">
+			<button id="start">How the Future iPhone looks like</button>
+				<div id = "future" style="background-color:#989898;height:400px;width:300px;position:relative"></div>
+		</section>
+	
+</div>
+	
+
+		
+	
+	<script src= "https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+	<script type="text/javascript">
+	
+
+		
+	$('a.scrollTo').on('click', function(){
+  
+  
+  		var scrollTo = $(this).attr('data-scrollTo');
+  
+  
+  $( "a.scrollTo" ).each(function() {
+    if(scrollTo == $(this).attr('data-scrollTo')){
+      $(this).addClass('active');
+    }else{
+      $(this).removeClass('active');
+    }
+  });
+  
+  
+  // animate scroll to the each section 
+  $('body, html').animate({
+    
+    "scrollTop": $('#'+scrollTo).offset().top - 120
+  }, 1500 );
+  return false;
+  
+})
+
+		
+		$(function() {
+			
+			var documentEl =$(document),
+				fadeElm = $('.fade-scroll');
+			documentEl.on('scroll',function(){
+				
+				var currentScrollPos=documentEl.scrollTop();
+				//function to fade away the heading and the introduction
+				fadeElm.each(function(){
+					var $this= $(this),
+						elemOffsetTop = $this.offset().top;
+					if (currentScrollPos > elemOffsetTop) $this.css('opacity',1-(currentScrollPos-elemOffsetTop)/400);
+				});
+			});
+			
+			
+		});
+		
+		
+	$(document).ready(function(){
+    var div = $("#future");
+    $("#start").click(function(){
+		//start animate the height
+        div.animate({height: 700}, "slow");
+        div.animate({width: 400}, "slow");
+        div.queue(function () {
+            div.css("background-color", "black");  
+            div.dequeue();
+        });
+        div.animate({height: 400}, "slow");
+        div.animate({width: 200}, "slow");
+    });
+});
+		
+
+		
+		
+	</script>
+	
+	
+	</main>
+
+</body>
+</html>

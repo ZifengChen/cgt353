@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Lab2-Zifeng Chen</title>
+<link rel = "stylesheet"
+   type = "text/css"
+   href = "css/style.css" />
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+<script>
+$(document).ready(function(){
+    $("tr").first().css("background-color", "powderblue");
+});//change the background color of first row
+	
+	$(document).ready(function(){
+    $("tr").last().css("background-color", "pink");
+});//change the background color of last row
+
+
+	
+$(document).ready(function(){
+    $("#hide").click(function(){
+        $("#d1").hide();
+    });
+    $("#show").click(function(){
+        $("#d1").show();
+    });
+});//click to hide or show image
+
+
+
+$(document).ready(function() {
+	$("#slide").click(function(){
+	$("#div2").toggle("slide");
+	});	
+});// click to slide image
+
+
+
+$(document).ready(function(){
+    $("#animate").click(function(){
+        $("#div3").animate({
+            left: '400px',
+            opacity: '0.4'
+        });
+    });
+});//click to animate image
+
+
+$(document).ready(function(){
+$("#div4").click(function(){
+  $("#dog4").fadeOut(500, function() {
+    $(this).attr("src", "images/p1.jpg");
+    $(this).load(function () {
+     $(this).fadeIn(500);
+    });
+    });
+  });
+ });
+	
+
+</script>
+</head>
+
+<body>
+<script>
+$(document).ready(function(){
+    $("li").on("click",function(){
+        $(this).toggleClass("blue");
+    });
+});
+//change the background color of the text
+	
+</script>
+<h1>My favourite animal</h1>
+	<p1><a class="magnify">I love dogs very much. They're loyal and intelligent. The best thing in a day is dogs waiting at the door when they know you're coming home. And I feel calm and relaxed when I spending time playing with dogs.</a></p1>
+	
+	<h2>Images</h2>
+	
+	<button id="hide">Hide</button>
+	<button id="show">Show</button>
+	<div id = "div1">	
+	<img id= "d1" src="images/p1.jpg" alt="pitbull" style="width:250px;height:300px;">	
+	</div>
+	
+	<!--Source:https://i.pinimg.com/736x/fb/73/8a/fb738a349fc7fa71a5e9a84c740abab0--bully-dog-bully-breed.jpg-->
+	
+	
+		<button id="slide">Click here to slide picture</button>
+		<div id = "div2">
+		<img src="images/p3.jpg" alt="dog3" style="width:300px;height:300px; position:relative;">
+		<!--Source:https://d1w5usc88actyi.cloudfront.net/wp-content/uploads/2014/04/pitbull-710x734.jpg-->
+		</div>
+
+	
+		<button id="animate">Click here to animate picture</button>
+		<div id = "div3">
+		<img id="dog" src="images/p2.jpg" alt="dog2" style="width:300px;height:300px; position:relative;">
+		<!--Source:http://www.dogbreedplus.com/dog_breeds/images/American-Pitbull-Terrier-Dog.jpg
+	--></div>
+	
+		<p>↓Click picture to fade out↓</p>
+		<div id = "div4">
+		<img id="dog4" src="images/p4.jpg" alt="dog4" style="width:300px;height:300px; position:relative;">
+		<!--Source:http://img2.zergnet.com/731737_300.jpg
+	--></div>
+	
+	
+	
+<h2>Distinguishing features</h2>
+
+<ul>
+  <li>They can see in dark!Dogs’ eyes contain a special membrane, called the tapetum lucidum.</li>
+  <li>Dogs have about 1,700 taste buds.</li>
+  <li>It was recently discovered that dogs do see in color, just not as vivid as we see.</li>
+  <li>Greyhounds can reach a speed of up to 45 miles per hour.</li>
+</ul> 
+<table style="width:100%">
+  <caption>Pros and Cons of having the dog with me on a deserted island</caption>
+  <tr>
+    <th>Pros</th>
+	<th>Cons</th>
+  </tr>
+  <tr>
+    <td>I can play with my puppies.</td>
+    <td>I can't talk to a human.</td>
+  </tr>
+  <tr>
+    <td>Dog can help me find food.</td>
+    <td>Maybe I can only eat raw food.</td>
+  </tr>
+  <tr>
+    <td>Dog can help me DE-STRESS</td>
+    <td>Pooppppppppppp!!</td>
+  </tr>
+</table>
+<footer>
+  <p>Posted by: Zifeng Chen. Contact information: <a href="mailto:chen1677@purdue.edu">chen1677@purdue.edu</a>.</p>
+  <div id="share-buttons">
+      <a href="https://www.facebook.com/profile.php?id=100006545859530" target="_blank">
+        <img src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" />
+    </a>
+        <a href="https://www.linkedin.com/in/zifeng-chen-b450aaa5/" target="_blank">
+        <img src="https://simplesharebuttons.com/images/somacro/linkedin.png" alt="LinkedIn" />
+    </a>
+       
+    <a href="https://twitter.com/ceaser366" target="_blank">
+        <img src="https://simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter" />
+    </a>
+	</div>
+</footer>
+</body>
+</html>

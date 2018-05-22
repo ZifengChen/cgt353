@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <link rel="stylesheet" href="css/style.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+  <script src="scripts/responsiveslides.min.js"></script>
+<script>
+  $(function() {
+      $("#slider1").responsiveSlides({
+        maxwidth: 800,
+        speed: 700
+      });
+  });
+  
+  function sortTable(n) {
+  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+  table = document.getElementById("myTable");
+  switching = true;
+  dir = "asc"; 
+  while (switching) {
+    switching = false;
+    rows = table.getElementsByTagName("TR");
+    for (i = 1; i < (rows.length - 1); i++) {
+      shouldSwitch = false;
+      x = rows[i].getElementsByTagName("TD")[n];
+      y = rows[i + 1].getElementsByTagName("TD")[n];
+      if (dir == "asc") {
+        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+          shouldSwitch= true;
+          break;
+        }
+      } else if (dir == "desc") {
+        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+          shouldSwitch= true;
+          break;
+        }
+      }
+    }
+    if (shouldSwitch) {
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+      switchcount ++;      
+    } else {
+      if (switchcount == 0 && dir == "asc") {
+        dir = "desc";
+        switching = true;
+      }
+    }
+  }
+}
+</script>
+<title>Table-Zifeng Chen, Li Li and Wei Zhong</title>
+</head>
+<body>
+	<h1> CGT353 - Solar System </h1>
+ <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="index.html">Solar System</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="home.html">Home</a></li>
+      <li class="active"><a href="table.html">Table</a></li>
+	  <li><a href="animation.html">Animation</a></li>
+      <li><a href="about.html">More information</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div id="wrapper">
+
+<h2 style="text-align:center">Eight Planet data</h2>
+<table id="myTable">
+  <tr> 
+    <th onclick="sortTable(0)"style="padding-right:15px;">Star Name</th>
+    <th style="padding-right:15px;">Radiu</th>
+	<th style="padding-right:15px;">Mass(10^24kg)</th>
+	<th style="padding-right:15px;">Density(kg/m3)</th>
+  </tr>
+  <tr>
+    <td>Mercury</td>
+    <td>(2,440 km / 1,516 miles)</td>
+	<td>0.330</td>
+	<td>5427</td>
+  </tr>
+  <tr>
+    <td>Venus</td>
+    <td>(6,052 km / 3,761 miles)</td>
+	<td>4.87</td>
+	<td>5243</td>
+  </tr>
+  <tr>
+    <td>Earth</td>
+    <td>(6,371 km / 3,959 miles)</td>
+	<td>5.97</td>
+	<td>5514</td>
+  </tr>
+  <tr>
+    <td>Mars</td>
+    <td>(3,390 km / 2,460 miles)</td>
+	<td>0.642</td>
+	<td>3933</td>
+  </tr>
+  <tr>
+    <td>Jupiter</td>
+    <td>(69,911 km / 43,441 miles)</td>
+	<td>1898</td>
+	<td>1326</td>
+  </tr>
+  <tr>
+    <td>Saturn</td>
+    <td>(58,232 km / 36,184 miles)</td>
+	<td>568</td>
+	<td>687</td>
+  </tr>
+  <tr>
+    <td>Uranus</td>
+    <td>(25,362 km / 15,759 miles)</td>
+	<td>86.8</td>
+	<td>1271</td>
+  </tr>
+  <tr>
+    <td>Neptune</td>
+    <td>(24,622 km / 15,299 miles)</td>
+	<td>102</td>
+	<td>1638</td>
+  </tr>
+</table>
+
+</div>
+<div class="footer">
+  <p>This Website is produced for the cgt 353.  <br>-made by Zifeng Chen, Li Li and Wei Zhong</br></p>
+</div>
+</body>
+</html>
+

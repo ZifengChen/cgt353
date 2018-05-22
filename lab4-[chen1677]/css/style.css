@@ -1,0 +1,113 @@
+@charset "UTF-8";
+/* CSS Document */
+h1{
+	text-shadow: 3px 3px 5px red;
+	text-align: center;
+}
+
+p{
+	font-size: 16px;
+	font-family: "Times New Roman", Times, serif;
+}
+
+body {
+    background-image: url(http://besthdwallpapers.org/wp-content/uploads/2017/05/light-background-hd-desktop-wallpaper-high-definition-mobile.jpg);
+}
+footer {
+	position: relative;
+	margin: auto;
+	padding-top: 20px;
+	bottom: 0px;
+	text-align: center;
+}
+
+div#share-buttons img {
+width: 35px;
+padding: 5px;
+border: 0;
+box-shadow: 0;
+display: inline;
+}
+
+legend{
+	font-size: 16px;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 12px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #555;
+    outline: none;
+}
+
+
+input[type=email] {
+    width: 100%;
+    padding: 12px 12px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #555;
+    outline: none;
+}
+
+.form-style{
+    max-width: 600px;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+form {
+  position: relative;
+  width: 600px;
+  margin: 50px auto 100px auto;
+}
+
+input {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.875em;
+  width: 470px;
+  height: 50px;
+  padding: 0px 15px 0px 15px;
+  
+  background: transparent;
+  outline: none;
+  color: #726659;
+  
+  border: solid 1px #b3aca7;
+  border-bottom: none;
+  
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+}
+
+input:hover {
+  background: #b3aca7;
+  color: #e2dedb;
+}
+
+textarea {
+  width: 470px;
+  max-width: 470px;
+  height: 110px;
+  max-height: 110px;
+  padding: 15px;
+  
+  background: transparent;
+  outline: none;
+  
+  color: #726659;
+  font-family: 'Lato', sans-serif;
+  font-size: 0.875em;
+  
+  border: solid 1px #b3aca7;
+  
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+}
+
+

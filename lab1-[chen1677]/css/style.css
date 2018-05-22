@@ -1,0 +1,153 @@
+@charset "UTF-8";
+/* CSS Document */
+h1{
+	text-shadow: 3px 3px 5px red;
+	text-align: center;
+}
+
+h2{
+	text-align: center;
+}
+
+h3{
+	font-size: 24px;
+}
+
+img {
+    border-radius: 20px;
+}
+
+p{
+	font-size: 18px;
+	font-family: "Times New Roman", Times, serif;
+}
+
+body {
+    background-image: url(http://besthdwallpapers.org/wp-content/uploads/2017/05/light-background-hd-desktop-wallpaper-high-definition-mobile.jpg);
+}
+footer {
+	position: relative;
+	margin: auto;
+	padding-top: 20px;
+	bottom: 0px;
+	text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #C7484A;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #65251c;
+}
+
+
+div.outer {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 180px;
+}
+
+div.outer:hover {
+    border: 1px solid #777;
+}
+
+div.outer img {
+    width: 100%;
+    height: auto;
+}
+
+div#share-buttons img {
+width: 35px;
+padding: 5px;
+border: 0;
+box-shadow: 0;
+display: inline;
+}
+
+div#effect2{
+    width: 100px;
+    height: 50px;
+    background: red;
+    -webkit-transition: width 3s;
+    transition: width 3s;
+}
+
+div#effect2:hover {
+    width: 300px;
+}
+
+div.grey{
+    width: 200px;
+    height: 50px;
+    background-color: grey;
+    border: 2px solid black;
+}
+
+div#effect3 {
+    -ms-transform: rotate(15deg);
+    -webkit-transform: rotate(15deg);
+    transform: rotate(15deg); 
+}
+
+div#effect4{
+    width: 100px;
+    height: 50px;
+    background-color: blue;
+    -webkit-animation-name: example;
+    -webkit-animation-duration: 4s; 
+    animation-name: example;
+    animation-duration: 4s;
+}
+
+@-webkit-keyframes example {
+    from {background-color: gold;}
+    to {background-color: orange;}
+}
+
+/* Standard syntax */
+@keyframes example {
+    from {background-color: gold;}
+    to {background-color: orange;}
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+p1 {
+	text-shadow: 2px 2px 5px red;
+	font-size: 20px;
+	font-family: "Times New Roman", Times, serif;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+    text-align: left;
+}

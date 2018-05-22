@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+  $("img").click(function() {
+    $src = $(this).attr("src");
+    if (!$("#light-box").length > 0) {
+      $("body").append("<div id='light-box'><span class='material-icons'>close</span><img src=''></div>");
+      $("#light-box").show();
+      $("#light-box img").attr("src", $src);
+    } else {
+      $("#light-box").show();
+      $("#light-box img").attr("src", $src);
+    }
+  });
+  $("body").on("click", "#light-box span", function() {
+    $("#light-box").hide();
+  });
+});
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>GALLERY | Zifeng Chen</title>
+<link rel="stylesheet" type= "text/css" href= "css/blog.css"/>
+</head>
+
+<body>
+
+	<input type="checkbox" id="menuToggle">
+	<label for="menuToggle" class="menu-icon">&#9776;</label>
+
+	<header>
+		<div id="brand"></div>
+	</header>
+	
+	<nav class="menu">
+		<ul>
+			<li><a href="index.html">HOME</a></li>
+			<li><a href="skills.html">MY SKILLS</a></li>
+			<li><a href="portfolio.html">PORTFOLIO</a></li>
+			<li><a href="blog.html">GALLERY</a></li>
+			<li><a href="contact.html">CONTACT</a></li>
+		</ul>
+	
+	</nav>
+	
+	<h1>GALLERY</h1>
+
+	<table align="center">
+		<tr>
+			<th colspan="4">Previous Work</th>
+		</tr>
+		
+		<tr>
+			<td colspan="4"><em>Click on thumbnails below to make the image larger.</em></td>
+		</tr>
+		<!-- images are all come from my own works -->
+		<tr>
+			<td><img src="images/ai1.png" alt="ai1"></td>
+			<td><img src="images/poster1.png" alt="poster1"></td>
+			<td><img src="images/poster2.png" alt="poster2"></td>
+			<td><img src="images/poster3.png" alt="poster3"></td>
+		</tr>
+		
+		<tr>
+			<td><img src="images/houdini1.png" alt="houdini1"></td>
+			<td><img src="images/maya1.png" alt="maya1"></td>
+			<td><img src="images/poster4.png" alt="poster4"></td>
+			<td><img src="images/catia1.jpg" alt="catia1"></td>
+		</tr>
+	</table>
+
+</body>
+</html>

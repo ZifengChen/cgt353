@@ -1,0 +1,58 @@
+@charset "utf-8";
+/* CSS Document */
+h1{
+	text-shadow: 3px 3px 5px red;
+	text-align: center;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+    text-align: left;
+}
+p1{
+	font-size: 18px;
+}
+a.magnify:hover{
+	font-size: 200%;
+}
+body {
+    background-image: url(http://besthdwallpapers.org/wp-content/uploads/2017/05/light-background-hd-desktop-wallpaper-high-definition-mobile.jpg);
+}
+
+li {
+    color: black;
+    cursor: pointer;
+    font-weight: bolder;
+	font-size: 0.8rem;
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+  }
+
+.blue{
+	color:#B57114;
+	font-size:5.8rem;
+}
+
+footer {
+	position: relative;
+	margin: auto;
+	padding-top: 20px;
+	bottom: 0px;
+	text-align: center;
+}
+
+div#share-buttons img {
+width: 35px;
+padding: 5px;
+border: 0;
+box-shadow: 0;
+display: inline;
+}
+
+caption{
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+	font-size: 20px;
+	text-align: center;
+}

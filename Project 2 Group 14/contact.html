@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <link rel="stylesheet" href="css/style.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+  <script src="scripts/responsiveslides.min.js"></script>
+<script>
+  $(function() {
+      $("#slider1").responsiveSlides({
+        maxwidth: 800,
+        speed: 700
+      });
+  });
+</script>
+<title>Contact-Zifeng Chen, Li Li and Wei Zhong</title>
+</head>
+<body>
+	<h1> CGT353 - Solar System </h1>
+ <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="index.html">Solar System</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="table.html">Table</a></li>
+	  <li><a href="animation.html">Animation</a></li>
+      <li><a href="about.html">More information</a></li>
+      <li class="active"><a href="contac.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="main"style="text-align: center;width:100%">
+<form name="myform" method="POST" action="http://formspree.io/yongjidajun@163.com" autocomplete="on" style="width:100%;">
+	
+	
+  <label for="firstname">First Name:</label>
+  <input type="text" name="firstname" placeholder="Your first name *"required id="firstname" > <br><br>
+  
+  <label for="lastname">Last Name:</label>
+  <input type="text" name="lastname" placeholder="Your last name *"required id="lastname"><br><br>
+  
+  <label for="number">Phone Number:</label>
+  <input type="text" name="number" placeholder="Your Phone Number *"required id="number"><br><br>
+  
+  <label for="mail">Email:</label>
+  <input type="email" name="mail" id="mail" placeholder="Your email *"required>  <br><br>
+  
+  <label><input type="radio" name="gender" value="male" checked> Male<br></label><br>
+  <label><input type="radio" name="gender" value="female"> Female<br></label><br>
+  
+  <label for="message">Message:</label>
+  <textarea name="message" placeholder="Your message" id="message"></textarea><br><br>
+  Note: * is required
+  <br>
+  <button type="submit">Submit</button>
+</form>
+</div>
+<div class="footer">
+  <p>This Website is produced for the cgt 353.  <br>-made by Zifeng Chen, Li Li and Wei Zhong</br></p>
+</div>
+</body>
+</html>
